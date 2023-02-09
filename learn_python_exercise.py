@@ -171,11 +171,11 @@
 #     i += 1
 # print(total)
     
-number = input("enter the number: ")
-total=0
-i=1
-#while i<= number:
-total = int(number[0])+int(number[0])+...+int(number[-1])
-print(total)
+# number = input("enter the number: ")
+# total=0
+# i=1
+# #while i<= number:
+# total = int(number[0])+int(number[0])+...+int(number[-1])
+# print(total)
 
 
