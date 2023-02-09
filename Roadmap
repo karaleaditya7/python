@@ -1,0 +1,39 @@
+Basics :
+    basic syntax
+    variables and datatypes
+    condotionals and looping
+    type casting, exceptions
+    Functions, Builtin Functions
+    List, tuples, sets, dictionaries
+
+Datastructures and algorithms:
+    Arrays and linked lists
+    heaps, stacks and queues
+    hash tables
+    bibary search tree
+    recurssion
+    sorting algorithms
+
+classes
+inheritance
+methods, dunder --> oop:
+                        Advanced topics: 
+                                Lambdas
+                                Decorators
+                                Regular Expressions
+                                Iterators:
+                                        Modules:
+                                            Builtin
+                                            custom
+
+pip and PyPI : is package manager or also a dependancy manager for any python application 
+
+Framework: 
+        Synchronouse:
+                    Django
+                    Flask
+                    Pyramid
+
+        Asynchronouse: 
+                    aiohttp
+
