@@ -336,6 +336,38 @@ while i<=10:
     #i += 1
 print(total)
 
+===================================
+#infinite Loop 
+
+i =0
+while i <= 10:
+    print("Hello world")
+
+OR 
+
+while True:
+    print("Hello world")
+
+=======================================
+
+#for loop
+
+range is impoertant in for Loop 
+
+
+for i in range(10): # 0 to 9
+    print(f"Hello world : {i}")
+
+===============
+sum
+
+total = 0
+for i in range(0,10):
+    total = total + i
+    print(total)
+
+
+
 
 
 
