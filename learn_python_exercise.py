@@ -170,12 +170,50 @@
 #     total += i
 #     i += 1
 # print(total)
-    
-# number = input("enter the number: ")
-# total=0
-# i=1
-# #while i<= number:
-# total = int(number[0])+int(number[0])+...+int(number[-1])
+
+# number = input("enter any no.: ")
+
+# total = 0   
+# i=0
+# while i < len(number):
+#     total = total + int(number[i])
+#     i = i + 1
 # print(total)
 
+# name = input("what is your name: ")
+# neglect_double=""
+# i=0
 
+# while i < len(name):
+#     if  name[i] not in neglect_double:
+#         #we have to store chara in our names in the "neglect_double" variable
+#         neglect_double = neglect_double + name[i]
+#         print(f"{name[i]}.{name.count(name[i])}")
+#     i += 1
+
+# i =0
+# while i <= 10:
+#     print("Hello world")
+
+# while True:
+#     print("Hello world")
+
+# for i in range(10):
+#     print(f"Hello world : {i}")
+#     print("this is line \n")
+
+# total = 0
+# for i in range(0,10):
+#     total = total + i
+#     print(total)
+
+# total = 0
+# for i in range(0,10):
+#     total = total + i
+# print(total)
+
+num = int(input("the number is: "))
+total=0
+for i in range(0,num+1):
+    total += i
+print(total)
