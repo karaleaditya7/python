@@ -366,6 +366,83 @@ for i in range(0,10):
     total = total + i
     print(total)
 
+======================
+count char in name
+name = input("enter your name : ")
+temp=""
+for i in range (len(name)):
+    if name[i] not in temp:
+        print(f"{name[i]}: {name.count(name[i])}")
+        temp += name[i]
+
+=================================================
+break and continue keyword
+
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+
+for i in range(1, 10):
+    if i == 5:
+        continue
+    print(i)
+
+=================================
+modify number guessing game 
+
+===========================
+
+variable scope
+
+x = 5 # <== Global variable
+def func():
+    x = 7  #  <== local variable , local variable is limited into the function only
+    return x
+
+print(x) # ==> it will print global variable
+
+#to print local variable, we have to call function
+print(func())
+
+#to call the global variable in the function, 
+x=5
+def func():
+    global x
+    x=7
+    return 7
+
+print(func())
+
+
+======================================
+list
+
+numbers = [1,2,3,4]
+print(numbers)
+
+words = ["word1","word2","word3"]
+print(words)
+mixed[1] = "two"
+mixed[1:] = "two"
+mixed[1:] = ["three","four"]
+
+mixed = [1,2,3,4,"word1", "word2", 2.3, none]
+print(mixed)
+
+=============================
+
+Add data to list
+
+fruits = ["grapes","apple"]
+fruits.append("mango")
+print(fruits) 
+
+=============================
+insert 
+
+fruits1 = ["apple","grapes","mango"]
+fruits1.insert = [1,"pine"]
 
 
 
