@@ -366,7 +366,95 @@ for i in range(0,10):
     total = total + i
     print(total)
 
+==================================
+guess the number 
 
+number = int(input("guess the number : "))
+winning_number = 47
+guess = 1
+game_over =False
+
+while not game_over:
+    if number == winning_number:
+        print(f"you won, and you guessed yhe winning number in {guess} times")
+        game_over = True
+
+    else:
+        if number < winning_number:
+            print("too low")
+            guess += 1
+            number = int(input("guess again: "))
+
+        else:
+            print("too high")
+            guess += 1
+            number = int(input("guess again: "))
+
+============================================================
+
+DRY (dont repeat yourself)
+
+number = int(input("guess the number : "))
+winning_number = 47
+guess = 1
+game_over =False
+
+while not game_over:
+    if number == winning_number:
+        print(f"you won, and you guessed yhe winning number in {guess} times")
+        game_over = True  #or break
+
+    else:
+        if number < winning_number:
+            print("too low")
+            
+        else:
+            print("too high")
+            
+        guess += 1
+        number = int(input("guess again: "))
+=============================================================
+
+step argument
+
+for i in range(1,11,2):
+    print(i)
+
+=====================================================
+
+#FUNCTIONS
+
+we dont have to write code again and again by using function
+
+def add_two(a,b):
+    return a+b 
+
+total = add_two(5,6)
+print(total)
+
+or 
+print(add_new(5,6))
+
+============================
+return vs print
+
+we should use return
+
+def sum_is(a,b,c):  # a.b.c are arguments
+    print(a+b+c)
+
+sum_is(5,5,5)       #5,5,5 arer parameters
+
+==========================================
+
+default parameters
+
+def user_info(first_name,last_name,age):
+    print(f"your first name is {first_name}")
+    print(f"your last name is {last_name}")
+    print(f"your sge is {age}")
+
+print(user_info(aditya, karale, 27))
 
 
 
