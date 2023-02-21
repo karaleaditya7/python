@@ -212,8 +212,69 @@
 #     total = total + i
 # print(total)
 
-num = int(input("the number is: "))
-total=0
-for i in range(0,num+1):
-    total += i
-print(total)
+# num = int(input("the number is: "))
+# total=0
+# for i in range(0,num+1):
+#     total += i
+# print(total)
+
+# name = input("enter your name : ")
+# temp=""
+# i=0
+# for i in range (len(name)):
+#     if name[i] not in temp:
+#         print(f"{name[i]}: {name.count(name[i])}")
+#         temp += name[i]
+
+# for i in range(1, 10):
+#     if i == 5:
+#         break
+#     print(i)
+
+# for i in range(1, 10):
+#     if i == 5:
+#         continue
+#     print(i)
+
+# x = 5 # <== Global variable
+# def func():
+#     x = 7  #  <== local variable , local variable is limited into the function only
+#     return x
+
+# print(x) # ==> it will print global variable
+
+# #to print local variable, we have to call function
+# print(func())
+
+#to call the global variable in the function, 
+# x=5
+# def func():
+#     global x
+#     x = 7
+#     return x
+
+# print(func())
+# print(x)
+
+
+
+# numbers = [1,2,3,4]
+# print(numbers)
+
+# words = ["word1","word2","word3"]
+# print(words)
+# print(words[:2])
+
+# mixed = [1,2,3,4,"word1", "word2", 2.3, None]
+# #mixed[1] = "two"
+# mixed[1:] = "two"
+# mixed[1:] = ["three","four"]
+# print(mixed)
+
+# fruits = ["grapes","apple"]
+# fruits.append("mango")
+# print(fruits) 
+
+fruits1 = ["apple","grapes","mango"]
+fruits1.insert(1,"pine")
+print(fruits1)
