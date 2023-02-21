@@ -275,6 +275,51 @@
 # fruits.append("mango")
 # print(fruits) 
 
-fruits1 = ["apple","grapes","mango"]
-fruits1.insert(1,"pine")
-print(fruits1)
+# fruits1 = ["apple","grapes","mango"]
+# fruits1.insert(1,"pine")
+# print(fruits1)
+
+# fruits = ['apple','orange', 'pine', 'grapes', 'watermelon']
+# fruits.pop()
+# print(fruits)
+# fruits.pop(1)
+# print(fruits)
+
+# del fruits[1]
+# print(fruits)
+
+# fruits.remove("pine")
+# print(fruits)
+
+# fruits = ['apple', 'mango', 'banana', 'watermelon']
+# if 'apple' in fruits:
+#     print("apple is present")
+# else:
+#     print("not present")
+
+# fruits.count("apple")
+# print(fruits.count("apple"))
+
+# fruits.sort()
+# print(fruits)
+
+# numbers = [3,4,6,8,9,5]
+# # numbers.sort()
+# # print(numbers)
+
+# print(sorted(numbers))
+
+# user_info = "aditya 27".split()
+# print(user_info)
+
+# user_info = "aditya,27".split(',')
+# print(user_info)
+
+# name, age = "aditya,27".split(',')
+# print(name, end=" ")
+# print(age)
+
+name, age = input("enter name and ege: ").split('')
+print(name, end=" ")
+print(age)
+

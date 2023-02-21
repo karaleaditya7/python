@@ -444,9 +444,83 @@ insert
 fruits1 = ["apple","grapes","mango"]
 fruits1.insert = [1,"pine"]
 
+============================
 
+delete data from list
 
+POP == DELETE
 
+fruits = ['apple','orange', 'pine', 'grapes', 'watermelon']
+fruits.pop()
+print(fruits)
+
+fruits.pop(1)   
+print(fruits)
+
+DEL == DELETE
+
+del fruits[1]
+print(fruits)
+
+To remove particular item from the list
+
+fruits.remove("pine")
+print(fruits)
+
+To add data ==> append, extend, insert
+To remove data ==> pop, del , remove
+
+======================
+to check particular element is in the list or not
+
+fruits = ['apple', 'mango', 'banana', 'watermelon']
+if 'apple' in fruits:
+    print("apple is present")
+else:
+    print("not present")
+
+=================================
+
+count method
+
+fruits = ['apple', 'mango', 'banana', 'watermelon']
+fruits.count("apple")
+print(fruits)
+
+=======================
+to SORT  items in alphabetical order
+
+fruits = ['apple', 'mango', 'banana', 'watermelon']
+fruits.sort()
+
+print(fruits)
+
+numbers = [3,4,6,8,9,5]
+numbers.sort()
+print(numbers.sort())
+
+print(sorted(numbers)) # to see sorted numbers while printing ony
+
+=============================
+split method
+
+convert string into the list 
+
+user_info = "aditya 27".split()
+print(user_info)
+
+name, age = "aditya,27".split(',')
+ptint(name)
+print(age)
+
+name, age = input("enter name and ege: ").split('')
+print(name, end=" ")
+print(age)
+
+================================
+List vs array
+
+List is Mutable (can change)
 
 
 
