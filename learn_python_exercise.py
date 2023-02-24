@@ -437,10 +437,14 @@
 
 # print(user_info("aditya","karale",27))
 
+# mixed = [1,2,3,4,5,'six','seven',None]
+# print(mixed[-1])
 
+# mixed[1:]=['three','four']
+# print(mixed)
 
-
-
+# mixed[1]='two'
+# print(mixed)
 
 
 
