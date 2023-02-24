@@ -522,5 +522,93 @@ List vs array
 
 List is Mutable (can change)
 
+=========================
+loops in list
+
+fruits = ['apple','banana','chiku','mango','pear']
+
+#for loop
+for fruit in fruits:
+    print(fruit)
+
+#while loop
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+
+    i += 1
+
+=============== 
+list inside list
+
+list = [[1,2,3],[4,5,6],[7,8,9]]
+
+for i in list:
+    for n in i:
+        print(n)
+
+print(list[1][1])
+==========================
+
+more about list 
+
+numbers = list(range(1,11))
+# print(numbers)
+
+popped_item = numbers.pop()
+print(popped_item)
+print(numbers)
+
+print(numbers.index[1])
+
+============================
+pass list to a function 
+
+list = [1,2,3,4,5,6,7,8,9,10]
+def negative_list(l):
+    negative = []
+    for i in l:
+        negative.append(-l)
+    return negative 
+
+print(negative_list(list))
+
+=====================================
+#with reverse method
+numbers = [1,2,3,4,5]
+def reverse_list(l):
+    return l.reverse()
+
+def reverse_list(l):
+    l.reverse()
+    return l 
+
+print(reverse_list(numbers))
+
+#with string slicing
+def reverse_list(l):
+    return [::-1]
+
+# popped method
+
+popped_item =numbers.pop()
+def reverse_list(l):
+    popped = []
+    for i in range(len(l)):
+        popped_item = l.pop()
+        popped.append(popped_item)
+    return popped
+print(reverse_list(numbers))
+
+
+============================
+min and max function
+
+numbers = [2,40,10]
+print(min(numbers))
+print(max(numbers))
+
+
+
 
 

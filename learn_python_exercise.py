@@ -319,7 +319,142 @@
 # print(name, end=" ")
 # print(age)
 
-name, age = input("enter name and ege: ").split('')
-print(name, end=" ")
-print(age)
+# name, age = input("enter name and ege: ").split(' ')
+# print(name, end=" ")
+# print(age)
+
+# fruits = ['apple','banana','chiku','mango','pear']
+
+# for fruit in fruits:
+#     print(fruit)
+
+# i = 0
+# while i < len(fruits):
+#     print(fruits[i])
+
+#     i += 1
+
+# list = [[1,2,3],[4,5,6],[7,8,9]]
+
+# for i in list:
+#     for n in i:
+#         print(n)
+
+# print(list[1][1])
+
+# print(type(list))
+
+# numbers = list(range(1,11))
+# print(numbers)
+
+# popped_item = numbers.pop()
+# print(popped_item)
+# print(numbers)
+
+# print(numbers.index(2)) 
+
+# list = [1,2,3,4,5,6,7,8,9,10]
+# def negative_list(l):
+#     negative = []
+#     for i in l:
+#         negative.append(-i)
+#     return negative 
+
+# print(negative_list(list))
+
+#===============
+
+# numbers = [1,2,3,4,5]
+
+# def square_numbers(sq):
+#     squares = []
+#     for i in sq:
+#         squares.append(i**2)
+#     return squares
+# print(square_numbers(numbers))
+
+# def reverse_list(l):
+#     return l.reverse()
+
+# def reverse_list(l):
+#     l.reverse()
+#     return l 
+
+# print(reverse_list(numbers))
+
+
+# def reverse_list(l):
+#     return l[::-1]
+# print(reverse_list(numbers))
+
+# def reverse_list(l):
+#     popped = []
+#     for i in range(len(l)):
+#         popped_item = l.pop()
+#         popped.append(popped_item)
+#     return popped
+# print(reverse_list(numbers))
+# list = ['abc','pqr','xyz']
+# def reverse_item(l):
+#     rev = []
+#     for i in l:
+#             q= i[::-1]
+#             rev.append(q)
+#     return rev 
+      
+# print(reverse_item(list))
+
+# numbers = [1,2,3,4,5,6,7]
+
+# def odd_even_list(l):
+#         odd = []
+#         even = []
+#         for i in l:
+#             if i%2 == 0:
+#                 even.append(i)
+#             else:
+#                 odd.append(i)
+#             i += 1
+#     # return even and even 
+#         combine = [odd, even]
+#         print(combine)
+
+# odd_even_list(numbers)
+
+    
+# list1 = [1,2,3,4]
+# list2 = [1,2,5,6,7]
+
+# l1 = [1,2,3,4]
+# l2 = [1,2,5,6,7]
+# def common(list1, list2):
+
+#     combine = []
+#     for i in list1:
+#         if i in list2:
+#             combine.append(i)
+#     return combine
+
+# print(common(l1, l2))
+
+# numbers = [2,40,10]
+# print(min(numbers))
+# print(max(numbers))
+
+# def greatest_diff(l):
+#     return max(l)-min(l)
+# print(greatest_diff(numbers))    
+
+# list1 = [1,2,3,[1,2],[2,3]]
+# def findout_list_no(l1):
+#     count = 0
+#     for i in l1:
+#         if type(i) == list:
+#             count += 1
+#     return count
+
+# print(findout_list_no(list1))
+
+
+
 
