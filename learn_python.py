@@ -587,7 +587,7 @@ print(reverse_list(numbers))
 
 #with string slicing
 def reverse_list(l):
-    return [::-1]
+    return l[::-1]
 
 # popped method
 
@@ -609,6 +609,67 @@ print(min(numbers))
 print(max(numbers))
 
 
+==========================
+How to add data in dict
 
+user_info = {
+    'name' : 'aditya',
+    'age' : 27,
+    'fav_movie' : ['movie1','movie2'],
+}
 
+user_info['fav_songs'] = ['song1','song2']
 
+===============
+pop method
+
+popped_item = user_info.pop('fav_song')
+print(popped_item)
+
+=================
+popitem == > it removes any random key and value
+
+popped_item = user_info.popitem()
+
+=======================
+add new dict in existing dict
+
+more_info = {'state':'maharashtra','district':'ahmednagar','locality':'savedi'}
+user_info.update(more_info)
+print(user_info)
+
+=====================
+#fromkeys
+
+d = dict.fromkeys(('name','age','height'),'unknown')
+print(d)
+
+p = dict.fromkeys(range(1,11),'unknown')
+
+print(p)
+
+=======================
+get key 
+
+print(p.get(1))
+print(d.get('name'))
+
+=========================
+copy dict
+
+d1 = d.copy()
+print(d1)
+
+====================
+pop from d1
+
+d1 = pop.items()
+print(d1)
+
+d1 = d.copy()
+d1 = d
+
+d.popitem()
+print(d)
+
+print(d1)

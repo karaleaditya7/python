@@ -457,4 +457,42 @@
 
 
 
+# user_info = {
+#     'name' : 'aditya',
+#     'age' : 27,
+#     'fav_movie' : ['movie1','movie2'],
+#     'fav_songs' : ['song1','song2']
+# }
 
+# print(user_info['name'])
+# user_info['fav_songs'] = ['song1','song2']
+
+# print(user_info)
+
+# popped_item = user_info.pop('fav_songs')
+# print(popped_item)
+# print(user_info)
+
+# popped_item = user_info.popitem()
+# print(popped_item)
+# print(user_info)
+
+# more_info = {'state':'maharashtra','district':'ahmednagar','locality':'savedi'}
+# user_info.update(more_info)
+# print(user_info)
+
+d = dict.fromkeys(('name','age','height'),'unknown')
+# print(d)
+
+# p = dict.fromkeys(range(1,11),'unknown')
+# print(p)
+# print(p.get(1))
+# print(d.get('name'))
+
+d1 = d.copy()
+# d1 = d
+
+d.popitem()
+print(d)
+
+print(d1)   
