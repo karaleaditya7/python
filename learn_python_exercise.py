@@ -218,7 +218,6 @@
 #     total += i
 # print(total)
 
-<<<<<<< HEAD
 # number = int(input("guess the number : "))
 # winning_number = 47
 # guess = 1
@@ -448,7 +447,6 @@
 # print(mixed)
 
 
-=======
 # name = input("enter your name : ")
 # temp=""
 # i=0
@@ -685,8 +683,6 @@
 #     return count
 
 # print(findout_list_no(list1))
->>>>>>> 2070f0352af410bf897101b4c20947578a1fe4c1
-
 
 
 # user_info = {
@@ -713,7 +709,7 @@
 # user_info.update(more_info)
 # print(user_info)
 
-d = dict.fromkeys(('name','age','height'),'unknown')
+# d = dict.fromkeys(('name','age','height'),'unknown')
 # print(d)
 
 # p = dict.fromkeys(range(1,11),'unknown')
@@ -721,10 +717,16 @@ d = dict.fromkeys(('name','age','height'),'unknown')
 # print(p.get(1))
 # print(d.get('name'))
 
-d1 = d.copy()
-# d1 = d
+# d1 = d.copy()
+# # d1 = d
 
-d.popitem()
-print(d)
+# d.popitem()
+# print(d)
 
-print(d1)   
+# print(d1)   
+
+user = {'name':"aditya", 'age':27}
+print(user.get('name'))
+
+print(user.get('fav'))
+print(user.get('fav','not found'))

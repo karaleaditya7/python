@@ -694,7 +694,6 @@ print(reverse_list(numbers))
 
 ============================
 min and max function
->>>>>>> 2070f0352af410bf897101b4c20947578a1fe4c1
 
 numbers = [2,40,10]
 print(min(numbers))
@@ -765,3 +764,12 @@ d.popitem()
 print(d)
 
 print(d1)
+
+==========================
+
+get method
+
+user = {'name':"aditya", 'age':27}
+print(user.get('name'))
+
+print(user.get('fav','not found'))
