@@ -218,7 +218,7 @@
 #     total += i
 # print(total)
 
-<<<<<<< HEAD
+
 # number = int(input("guess the number : "))
 # winning_number = 47
 # guess = 1
@@ -448,7 +448,7 @@
 # print(mixed)
 
 
-=======
+# =======
 # name = input("enter your name : ")
 # temp=""
 # i=0
@@ -685,8 +685,118 @@
 #     return count
 
 # print(findout_list_no(list1))
->>>>>>> 2070f0352af410bf897101b4c20947578a1fe4c1
+
+
+# words = ('aditya',)
+# print(type(words))
+
+# words = 'aditya', 'karthik', 'kyldeep'
+# print(type(words))
+
+# devops = 'karthik', 'rohan', 'aditya' 
+# dev1,dev2,dev3 = (devops)
+# print(dev1)
+
+# list2 = ('aditya',['hi','hello'])
+# list2[1].remove()
+# print(list2)
+
+
+# def func(int1, int2):
+#     add = int1 + int2
+#     multiply = int1*int2
+#     return add, multiply
+
+# print(func(5, 6))
+
+# nums = tuple(range((1,11)))
+# print(nums)
+
+# user = {'name' : 'aditya', 'age' : 27}
+# print(user)
+# print(type(user))
+
+# nums = str((1,2,3,4,5,6,7,8,9,10))
+# num_list = str([1,2,3,4,5,6,7,8,9,10])
+
+# print(num_list)
+# print(type(num_list))
+
+# user = dict(name = 'aditya', age= 27)
+# print(type(user))
+
+# print(user['name'])
+
+# user_info = {
+#     'name' : 'aditya',
+#     'age' : 27,
+#     'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+
+# }
+
+# print(user_info)
+# print(user_info['fav_movie'])
+
+# users = {
+#         'user1' : {
+#                 'name' : 'aditya',
+#                 'age' : 28,
+#                 'add' : 'nagar'
+#         },
+
+#         'user2' : {
+#                 'name': 'karthik',
+#                 'age' : 24,
+#                 'add' : 'nashik'
+
+#         }
+# }
+
+# print(users)
+# print(users['user1'])
+
+# user_info2 = {}
+# user_info2['name'] = "aditya"
+# user_info2['age'] = 28
+
+# print(user_info2)
+
+user_info = {
+    'name' : 'aditya',
+    'age' : 27,
+    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+
+}
+
+
+# if 'name' in user_info:
+#         print('present')
+# else:
+#         print('not present')
+
+
+# if 'aditya' in user_info.values():
+#         print('present')
+# else:
+#         print('not present')
+
+# for i in user_info:
+#         print(i)
+
+# for i in user_info.values():
+#         print(i)
 
 
 
+# user_info_values = user_info.values()
+# print(user_info_values)
+# print(type(user_info_values))
 
+# user_items = user_info.items()
+# print(user_items)
+
+# for i in user_info:
+#         print(user_info[i])
+
+for key,value in user_info.items():
+    print(f"key is {key} and value is {value}")

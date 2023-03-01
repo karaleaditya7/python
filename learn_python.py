@@ -694,13 +694,163 @@ print(reverse_list(numbers))
 
 ============================
 min and max function
->>>>>>> 2070f0352af410bf897101b4c20947578a1fe4c1
 
 numbers = [2,40,10]
 print(min(numbers))
 print(max(numbers))
 
+=================================================================
+TUPLES
+
+tuples are immutable
+
+we use tuple when we know that we are not goping to change the data 
+tuple are faster than list
+methods
+count, index
+len
+slice
+
+======================
+tuple with one element
+
+numbers = (1,)
+words = ('aditya',)
+
+#comma is necessary to make tuple
+
+=======================
+tuple without parenthesis
+
+words = 'aditya', 'karthik', 'kyldeep'
+print(type(words))
+
+===========================
+tuple unpacking
+
+devops = 'karthik', 'rohan', 'aditya'
+dev1,dev2,dev3 = (devops)
+
+===========================
+#list insisde tuple and operations on it
+
+
+list = ('aditya','karthik',['hi','hello'])
+list[1].pop()
+print(list)
+
+list[1].append()
+print(list)
+
+===================================
+func returning two values
+
+def func(int1, int2):
+    add = int1 + int2
+    multiply = int1*int2
+    return add, multiply
+
+print(func(5, 6))
+==================================
+
+nums = tuple(range((1,11)))
+print(nums)
 
 
 
+nums = str((1,2,3,4,5,6,7,8,9,10))
+num_list = str([1,2,3,4,5,6,7,8,9,10])
 
+print(num_list)
+print(type(num_list))
+
+=================================
+dictionaries 
+
+unordered collection of data in key :value pair
+
+user = {name : aditya, age : 27}
+print(user)
+
+user = dict(name = 'aditya', age= 27)
+print(user['name'])
+
+user_info = {
+    'name' : 'aditya',
+    'age' : 27,
+    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+
+}
+
+print(user_info)
+
+#add data in empty dict
+
+user_info2 = {}
+user_info2['name'] = "aditya"
+user_info2['age'] = 28
+
+=====================
+check if key is present or not
+
+user_info = {
+    'name' : 'aditya',
+    'age' : 27,
+    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+
+}
+
+
+if 'name' in user_info:
+        print('present')
+else:
+        print('not present')
+
+========================
+check if values present or not
+
+user_info = {
+    'name' : 'aditya',
+    'age' : 27,
+    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+
+}
+
+
+if 27 in user_info.values:
+        print('present')
+else:
+        print('not present')
+
+================================
+for key and value 
+
+use for loop 
+
+for i in user_info:
+        print(i)
+
+for i in user_info.values():
+        print(i)
+
+=============================
+
+user_info_values = user_info.values()
+print(user_info_values)
+
+
+#same for keys
+
+=============================
+items method
+
+user_items = user_info.items()
+print(user_items)
+===========================
+
+for i in user_info:
+        print(user_info[i])
+
+=======================
+for key,value in user_info.items:
+    print(f"key is {key} and value is {value}")
