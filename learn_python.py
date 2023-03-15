@@ -678,7 +678,7 @@ print(reverse_list(numbers))
 
 #with string slicing
 def reverse_list(l):
-    return [::-1]
+    return l[::-1]
 
 # popped method
 
@@ -702,155 +702,111 @@ print(max(numbers))
 =================================================================
 TUPLES
 
-tuples are immutable
-
-we use tuple when we know that we are not goping to change the data 
-tuple are faster than list
-methods
-count, index
-len
-slice
-
-======================
-tuple with one element
-
-numbers = (1,)
-words = ('aditya',)
-
-#comma is necessary to make tuple
-
-=======================
-tuple without parenthesis
-
-words = 'aditya', 'karthik', 'kyldeep'
-print(type(words))
-
-===========================
-tuple unpacking
-
-devops = 'karthik', 'rohan', 'aditya'
-dev1,dev2,dev3 = (devops)
-
-===========================
-#list insisde tuple and operations on it
-
-
-list = ('aditya','karthik',['hi','hello'])
-list[1].pop()
-print(list)
-
-list[1].append()
-print(list)
-
-===================================
-func returning two values
-
-def func(int1, int2):
-    add = int1 + int2
-    multiply = int1*int2
-    return add, multiply
-
-print(func(5, 6))
-==================================
-
-nums = tuple(range((1,11)))
-print(nums)
 
 
 
-nums = str((1,2,3,4,5,6,7,8,9,10))
-num_list = str([1,2,3,4,5,6,7,8,9,10])
+=========================================
+dict
 
-print(num_list)
-print(type(num_list))
+unordered collection of unique item
 
-=================================
-dictionaries 
-
-unordered collection of data in key :value pair
-
-user = {name : aditya, age : 27}
-print(user)
-
-user = dict(name = 'aditya', age= 27)
-print(user['name'])
-
-user_info = {
-    'name' : 'aditya',
-    'age' : 27,
-    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
-
-}
-
-print(user_info)
-
-#add data in empty dict
-
-user_info2 = {}
-user_info2['name'] = "aditya"
-user_info2['age'] = 28
-
-=====================
-check if key is present or not
-
-user_info = {
-    'name' : 'aditya',
-    'age' : 27,
-    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
-
-}
+s = {1,2,3,2}
+print(s)
 
 
-if 'name' in user_info:
-        print('present')
-else:
-        print('not present')
+print(s[1]) ===> not possible i.e unordered 
 
-========================
-check if values present or not
+set data type
 
-user_info = {
-    'name' : 'aditya',
-    'age' : 27,
-    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
+set is basically used to remove duplicate items
+l = [1,2,2,2,3,3,4,4,4,5,6,7,7,8]
+s2 = set(l)
+print(s2)
 
-}
+s2 = list(set(l))
+
+l1 = {1,2,3,5}
+l1.add(4)
+print(l1)
+
+l1.remove(2)
+
+you cant set liste or dict in set
+
+s1 = {1,2,3,4}
+s2 = {3,4,5,6}
+
+=============================================
+list comprehenssion 
 
 
-if 27 in user_info.values:
-        print('present')
-else:
-        print('not present')
+square = [1**2 for i in range(1,11)]
+print(square)
 
-================================
-for key and value 
-
-use for loop 
-
-for i in user_info:
-        print(i)
-
-for i in user_info.values():
-        print(i)
+names = ['Aditya','Rohan','Karthik']
+namess = [names[0] for i in names]
+print(names)
 
 =============================
+if statement in comprehension 
 
-user_info_values = user_info.values()
-print(user_info_values)
+numbers = [1,2,3,4,5,6,7,8,9,10]
+even = []
+def even_numbers(even):
+    for i in numbers:
+        if numbers%2 == 0:
+            even.append(i)
+    print(even_numbers)
 
-
-#same for keys
+string = [str(i) for i in list if type(i)!=int]
+print(string) 
+               
 
 =============================
-items method
+if else with list comprehenssion
 
-user_items = user_info.items()
-print(user_items)
-===========================
+list_comp = [i**2 if i%2==0 else -i for i in list]
+print(list_comp)
 
-for i in user_info:
-        print(user_info[i])
+in list comprehension of if else we took for statement at UnicodeEncodeError
 
-=======================
-for key,value in user_info.items:
-    print(f"key is {key} and value is {value}")
+====================================
+Nested list ==> List under list
+
+list = [[1,2,3],[1,2,3],[1,2,3]]
+nested_list = []
+def nested(l):
+    nested_list = []
+    for i in l:
+        nested_list.append[0]
+
+print(nested(list))
+
+=============================================
+dictionary comprehenssion
+
+square = {num:num**2 for num in range(1,11)}
+print(square)
+        
+remenber, dict is always in key:value format, so ":" is must
+
+==============================================
+* args 
+
+def all_total(*args):
+    print(args)
+    print(type(args))
+
+all_total(1,2,3,25,35,98)
+
+
+here all work is done by * operator
+
+you can replace args with any other word
+
+def all_total(*args):
+        total = 0
+        for num in args:
+                total = total + num
+        return total
+print(all_total(31,2,3,5))

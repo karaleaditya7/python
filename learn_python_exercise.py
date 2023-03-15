@@ -448,7 +448,6 @@
 # print(mixed)
 
 
-# =======
 # name = input("enter your name : ")
 # temp=""
 # i=0
@@ -687,116 +686,129 @@
 # print(findout_list_no(list1))
 
 
-# words = ('aditya',)
-# print(type(words))
 
-# words = 'aditya', 'karthik', 'kyldeep'
-# print(type(words))
 
-# devops = 'karthik', 'rohan', 'aditya' 
-# dev1,dev2,dev3 = (devops)
-# print(dev1)
+# print(d1)   
 
-# list2 = ('aditya',['hi','hello'])
-# list2[1].remove()
+# user = {'name':"aditya", 'age':27}
+# print(user.get('name'))
+
+# def cube_dict(l):
+#     dict = {}
+#     for i in range(1,l+1):
+#         dict[i] = i**3
+#     return dict
+
+# print(cube_dict(5))
+
+
+
+# s = {1,2,3,2}
+# print(s)
+
+# l = [1,2,2,2,3,3,4,4,4,5,6,7,7,8]
+# # s2 = set(l)
+# s2 = list(set(l))
+# print(s2)
+
+# l1 = {1,2,3,5}
+# l1.add(4)
+# print(l1)
+
+# l1.remove(2)
+# print(l1)
+
+# s1 = {1,2,3,4}
+# s2 = {3,4,5,6}
+# print(s1 & s2)
+
+
+# square = [i**2 for i in range(1,11)]
+# print(square)
+
+# negative = [-i for i in range(1,11)]S
+# print(negative)
+
+# names = ['Aditya','Rohan','Karthik']
+# namess = [i[0] for i in names]
+# print(namess)
+
+# list1 = ['abc', 'pqr', 'xyz']
+# list2 = [[i[::-1] for i in list1][::-1]]
+# # a = list2[::-1]
 # print(list2)
 
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# even = []
 
-# def func(int1, int2):
-#     add = int1 + int2
-#     multiply = int1*int2
-#     return add, multiply
+# for i in numbers:
+#         if i%2 == 0:
+#             even.append(i)
+        
+# print(even)
+# 
+# even = [i for i in numbers if i%2 == 0]
+# print(even)
 
-# print(func(5, 6))
+# list = [1,2,3,['p','q','r'],2.5,'adi',1.6, True,False]
 
-# nums = tuple(range((1,11)))
-# print(nums)
+# string = []
 
-# user = {'name' : 'aditya', 'age' : 27}
-# print(user)
-# print(type(user))
+# for i in list:
+#         if type(i) != int:
+#                 string.append(i)
 
-# nums = str((1,2,3,4,5,6,7,8,9,10))
-# num_list = str([1,2,3,4,5,6,7,8,9,10])
+# string = [str(i) for i in list if type(i)!=int]
+# print(string) 
+                        
+# list = [1,2,3,4,5,6,7,8,9]
+# list1 = []
 
-# print(num_list)
-# print(type(num_list))
-
-# user = dict(name = 'aditya', age= 27)
-# print(type(user))
-
-# print(user['name'])
-
-# user_info = {
-#     'name' : 'aditya',
-#     'age' : 27,
-#     'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
-
-# }
-
-# print(user_info)
-# print(user_info['fav_movie'])
-
-# users = {
-#         'user1' : {
-#                 'name' : 'aditya',
-#                 'age' : 28,
-#                 'add' : 'nagar'
-#         },
-
-#         'user2' : {
-#                 'name': 'karthik',
-#                 'age' : 24,
-#                 'add' : 'nashik'
-
-#         }
-# }
-
-# print(users)
-# print(users['user1'])
-
-# user_info2 = {}
-# user_info2['name'] = "aditya"
-# user_info2['age'] = 28
-
-# print(user_info2)
-
-user_info = {
-    'name' : 'aditya',
-    'age' : 27,
-    'fav_movie' : ['razi', '3 idiots', 'hera pheri'] 
-
-}
+# for i in list:
+#         if i%2!=0:
+#                 list1.append(-i)
+#         else:
+#                 list1.append(i**2)
+# print(list1) 
 
 
-# if 'name' in user_info:
-#         print('present')
-# else:
-#         print('not present')
+# list_comp = [i**2 if i%2==0 else -i for i in list]
+# print(list_comp)
+
+# list = ([1,2,3],[1,2,3],[1,2,3])
+# nested_list = []
+# def nested(l):
+#     nested_list = []
+#     for i in l:
+#         nested_list.append[0]
+        
+#         return nested_list
 
 
-# if 'aditya' in user_info.values():
-#         print('present')
-# else:
-#         print('not present')
+# print(nested(list))
 
-# for i in user_info:
-#         print(i)
+# square = {num:num**2 for num in range(1,11)}
+# print(square)
 
-# for i in user_info.values():
-#         print(i)
+# square = {f"square of {num} is":num**2 for num in range(1,11)}
+# print(square)
+# for k,v in square.items():
+#         print(f"{k}:{v}")
 
+# string = "Aditya"
+# word_count = {i:string.count(i) for i in string }
+# print(word_count)
 
+# def all_total(*args):
+#     print(args)
+#     print(type(args))
 
-# user_info_values = user_info.values()
-# print(user_info_values)
-# print(type(user_info_values))
+# all_total(1,2,3,25,35,98)
 
-# user_items = user_info.items()
-# print(user_items)
+def all_total(*args):
+        total = 0
+        for num in args:
+                total = total + num
+        return total
+print(all_total(31,2,3,5))
 
-# for i in user_info:
-#         print(user_info[i])
-
-for key,value in user_info.items():
-    print(f"key is {key} and value is {value}")
