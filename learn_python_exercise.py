@@ -805,10 +805,25 @@
 
 # all_total(1,2,3,25,35,98)
 
+<<<<<<< HEAD
+# user = {'name':"aditya", 'age':27}
+# print(user.get('name'))
+
+# print(user.get('fav'))
+# print(user.get('fav','not found'))
+
+# def cube_dict(l):
+#     cubes = {}
+#     for i in range(1,l+1):
+#         cubes[i] = i**3
+#     return cubes
+# print(cube_dict(5))
+=======
 def all_total(*args):
         total = 0
         for num in args:
                 total = total + num
         return total
 print(all_total(31,2,3,5))
+>>>>>>> a550a3287482492715f4cedde9044ecc4f127a6b
 
