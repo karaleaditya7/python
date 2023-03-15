@@ -678,7 +678,7 @@ print(reverse_list(numbers))
 
 #with string slicing
 def reverse_list(l):
-    return [::-1]
+    return l[::-1]
 
 # popped method
 
@@ -694,13 +694,119 @@ print(reverse_list(numbers))
 
 ============================
 min and max function
->>>>>>> 2070f0352af410bf897101b4c20947578a1fe4c1
 
 numbers = [2,40,10]
 print(min(numbers))
 print(max(numbers))
 
+=================================================================
+TUPLES
 
 
 
 
+=========================================
+dict
+
+unordered collection of unique item
+
+s = {1,2,3,2}
+print(s)
+
+
+print(s[1]) ===> not possible i.e unordered 
+
+set data type
+
+set is basically used to remove duplicate items
+l = [1,2,2,2,3,3,4,4,4,5,6,7,7,8]
+s2 = set(l)
+print(s2)
+
+s2 = list(set(l))
+
+l1 = {1,2,3,5}
+l1.add(4)
+print(l1)
+
+l1.remove(2)
+
+you cant set liste or dict in set
+
+s1 = {1,2,3,4}
+s2 = {3,4,5,6}
+
+=============================================
+list comprehenssion 
+
+
+square = [1**2 for i in range(1,11)]
+print(square)
+
+names = ['Aditya','Rohan','Karthik']
+namess = [names[0] for i in names]
+print(names)
+
+=============================
+if statement in comprehension 
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+even = []
+def even_numbers(even):
+    for i in numbers:
+        if numbers%2 == 0:
+            even.append(i)
+    print(even_numbers)
+
+string = [str(i) for i in list if type(i)!=int]
+print(string) 
+               
+
+=============================
+if else with list comprehenssion
+
+list_comp = [i**2 if i%2==0 else -i for i in list]
+print(list_comp)
+
+in list comprehension of if else we took for statement at UnicodeEncodeError
+
+====================================
+Nested list ==> List under list
+
+list = [[1,2,3],[1,2,3],[1,2,3]]
+nested_list = []
+def nested(l):
+    nested_list = []
+    for i in l:
+        nested_list.append[0]
+
+print(nested(list))
+
+=============================================
+dictionary comprehenssion
+
+square = {num:num**2 for num in range(1,11)}
+print(square)
+        
+remenber, dict is always in key:value format, so ":" is must
+
+==============================================
+* args 
+
+def all_total(*args):
+    print(args)
+    print(type(args))
+
+all_total(1,2,3,25,35,98)
+
+
+here all work is done by * operator
+
+you can replace args with any other word
+
+def all_total(*args):
+        total = 0
+        for num in args:
+                total = total + num
+        return total
+print(all_total(31,2,3,5))
