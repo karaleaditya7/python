@@ -699,77 +699,114 @@ numbers = [2,40,10]
 print(min(numbers))
 print(max(numbers))
 
+=================================================================
+TUPLES
 
-==========================
-How to add data in dict
 
-user_info = {
-    'name' : 'aditya',
-    'age' : 27,
-    'fav_movie' : ['movie1','movie2'],
-}
 
-user_info['fav_songs'] = ['song1','song2']
 
-===============
-pop method
+=========================================
+dict
 
-popped_item = user_info.pop('fav_song')
-print(popped_item)
+unordered collection of unique item
 
-=================
-popitem == > it removes any random key and value
+s = {1,2,3,2}
+print(s)
 
-popped_item = user_info.popitem()
 
-=======================
-add new dict in existing dict
+print(s[1]) ===> not possible i.e unordered 
 
-more_info = {'state':'maharashtra','district':'ahmednagar','locality':'savedi'}
-user_info.update(more_info)
-print(user_info)
+set data type
 
-=====================
-#fromkeys
+set is basically used to remove duplicate items
+l = [1,2,2,2,3,3,4,4,4,5,6,7,7,8]
+s2 = set(l)
+print(s2)
 
-d = dict.fromkeys(('name','age','height'),'unknown')
-print(d)
+s2 = list(set(l))
 
-p = dict.fromkeys(range(1,11),'unknown')
+l1 = {1,2,3,5}
+l1.add(4)
+print(l1)
 
-print(p)
+l1.remove(2)
 
-=======================
-get key 
+you cant set liste or dict in set
 
-print(p.get(1))
-print(d.get('name'))
+s1 = {1,2,3,4}
+s2 = {3,4,5,6}
 
-=========================
-copy dict
+=============================================
+list comprehenssion 
 
-d1 = d.copy()
-print(d1)
 
-====================
-pop from d1
+square = [1**2 for i in range(1,11)]
+print(square)
 
-d1 = pop.items()
-print(d1)
+names = ['Aditya','Rohan','Karthik']
+namess = [names[0] for i in names]
+print(names)
 
-d1 = d.copy()
-d1 = d
+=============================
+if statement in comprehension 
 
-d.popitem()
-print(d)
+numbers = [1,2,3,4,5,6,7,8,9,10]
+even = []
+def even_numbers(even):
+    for i in numbers:
+        if numbers%2 == 0:
+            even.append(i)
+    print(even_numbers)
 
-print(d1)
+string = [str(i) for i in list if type(i)!=int]
+print(string) 
+               
 
-==========================
+=============================
+if else with list comprehenssion
 
-get method
+list_comp = [i**2 if i%2==0 else -i for i in list]
+print(list_comp)
 
-user = {'name':"aditya", 'age':27}
-print(user.get('name'))
+in list comprehension of if else we took for statement at UnicodeEncodeError
 
-print(user.get('fav','not found'))
+====================================
+Nested list ==> List under list
+
+list = [[1,2,3],[1,2,3],[1,2,3]]
+nested_list = []
+def nested(l):
+    nested_list = []
+    for i in l:
+        nested_list.append[0]
+
+print(nested(list))
+
+=============================================
+dictionary comprehenssion
+
+square = {num:num**2 for num in range(1,11)}
+print(square)
+        
+remenber, dict is always in key:value format, so ":" is must
+
+==============================================
+* args 
+
+def all_total(*args):
+    print(args)
+    print(type(args))
+
+all_total(1,2,3,25,35,98)
+
+
+here all work is done by * operator
+
+you can replace args with any other word
+
+def all_total(*args):
+        total = 0
+        for num in args:
+                total = total + num
+        return total
+print(all_total(31,2,3,5))

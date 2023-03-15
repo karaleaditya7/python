@@ -218,6 +218,7 @@
 #     total += i
 # print(total)
 
+
 # number = int(input("guess the number : "))
 # winning_number = 47
 # guess = 1
@@ -685,46 +686,126 @@
 # print(findout_list_no(list1))
 
 
-# user_info = {
-#     'name' : 'aditya',
-#     'age' : 27,
-#     'fav_movie' : ['movie1','movie2'],
-#     'fav_songs' : ['song1','song2']
-# }
 
-# print(user_info['name'])
-# user_info['fav_songs'] = ['song1','song2']
-
-# print(user_info)
-
-# popped_item = user_info.pop('fav_songs')
-# print(popped_item)
-# print(user_info)
-
-# popped_item = user_info.popitem()
-# print(popped_item)
-# print(user_info)
-
-# more_info = {'state':'maharashtra','district':'ahmednagar','locality':'savedi'}
-# user_info.update(more_info)
-# print(user_info)
-
-# d = dict.fromkeys(('name','age','height'),'unknown')
-# print(d)
-
-# p = dict.fromkeys(range(1,11),'unknown')
-# print(p)
-# print(p.get(1))
-# print(d.get('name'))
-
-# d1 = d.copy()
-# # d1 = d
-
-# d.popitem()
-# print(d)
 
 # print(d1)   
 
+# user = {'name':"aditya", 'age':27}
+# print(user.get('name'))
+
+# def cube_dict(l):
+#     dict = {}
+#     for i in range(1,l+1):
+#         dict[i] = i**3
+#     return dict
+
+# print(cube_dict(5))
+
+
+
+# s = {1,2,3,2}
+# print(s)
+
+# l = [1,2,2,2,3,3,4,4,4,5,6,7,7,8]
+# # s2 = set(l)
+# s2 = list(set(l))
+# print(s2)
+
+# l1 = {1,2,3,5}
+# l1.add(4)
+# print(l1)
+
+# l1.remove(2)
+# print(l1)
+
+# s1 = {1,2,3,4}
+# s2 = {3,4,5,6}
+# print(s1 & s2)
+
+
+# square = [i**2 for i in range(1,11)]
+# print(square)
+
+# negative = [-i for i in range(1,11)]S
+# print(negative)
+
+# names = ['Aditya','Rohan','Karthik']
+# namess = [i[0] for i in names]
+# print(namess)
+
+# list1 = ['abc', 'pqr', 'xyz']
+# list2 = [[i[::-1] for i in list1][::-1]]
+# # a = list2[::-1]
+# print(list2)
+
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# even = []
+
+# for i in numbers:
+#         if i%2 == 0:
+#             even.append(i)
+        
+# print(even)
+# 
+# even = [i for i in numbers if i%2 == 0]
+# print(even)
+
+# list = [1,2,3,['p','q','r'],2.5,'adi',1.6, True,False]
+
+# string = []
+
+# for i in list:
+#         if type(i) != int:
+#                 string.append(i)
+
+# string = [str(i) for i in list if type(i)!=int]
+# print(string) 
+                        
+# list = [1,2,3,4,5,6,7,8,9]
+# list1 = []
+
+# for i in list:
+#         if i%2!=0:
+#                 list1.append(-i)
+#         else:
+#                 list1.append(i**2)
+# print(list1) 
+
+
+# list_comp = [i**2 if i%2==0 else -i for i in list]
+# print(list_comp)
+
+# list = ([1,2,3],[1,2,3],[1,2,3])
+# nested_list = []
+# def nested(l):
+#     nested_list = []
+#     for i in l:
+#         nested_list.append[0]
+        
+#         return nested_list
+
+
+# print(nested(list))
+
+# square = {num:num**2 for num in range(1,11)}
+# print(square)
+
+# square = {f"square of {num} is":num**2 for num in range(1,11)}
+# print(square)
+# for k,v in square.items():
+#         print(f"{k}:{v}")
+
+# string = "Aditya"
+# word_count = {i:string.count(i) for i in string }
+# print(word_count)
+
+# def all_total(*args):
+#     print(args)
+#     print(type(args))
+
+# all_total(1,2,3,25,35,98)
+
+<<<<<<< HEAD
 # user = {'name':"aditya", 'age':27}
 # print(user.get('name'))
 
@@ -737,4 +818,12 @@
 #         cubes[i] = i**3
 #     return cubes
 # print(cube_dict(5))
+=======
+def all_total(*args):
+        total = 0
+        for num in args:
+                total = total + num
+        return total
+print(all_total(31,2,3,5))
+>>>>>>> a550a3287482492715f4cedde9044ecc4f127a6b
 
