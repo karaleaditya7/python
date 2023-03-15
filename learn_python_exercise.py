@@ -725,8 +725,16 @@
 
 # print(d1)   
 
-user = {'name':"aditya", 'age':27}
-print(user.get('name'))
+# user = {'name':"aditya", 'age':27}
+# print(user.get('name'))
 
-print(user.get('fav'))
-print(user.get('fav','not found'))
+# print(user.get('fav'))
+# print(user.get('fav','not found'))
+
+# def cube_dict(l):
+#     cubes = {}
+#     for i in range(1,l+1):
+#         cubes[i] = i**3
+#     return cubes
+# print(cube_dict(5))
+
