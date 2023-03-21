@@ -805,7 +805,6 @@
 
 # all_total(1,2,3,25,35,98)
 
-<<<<<<< HEAD
 # user = {'name':"aditya", 'age':27}
 # print(user.get('name'))
 
@@ -818,12 +817,123 @@
 #         cubes[i] = i**3
 #     return cubes
 # print(cube_dict(5))
-=======
-def all_total(*args):
-        total = 0
-        for num in args:
-                total = total + num
-        return total
-print(all_total(31,2,3,5))
->>>>>>> a550a3287482492715f4cedde9044ecc4f127a6b
 
+# def all_total(*args):
+#         total = 0
+#         for num in args:
+#                 total = total + num
+#         return total
+# print(all_total(31,2,3,5))
+
+# add = lambda a,b : a+b
+# print(add(2,3))
+
+# multiply = lambda a,b : a*b
+# print(multiply(2,3))
+
+# def odd_even(a):
+#     return a % 2 == 0
+
+# print(odd_even(5))
+
+#lambda fun -->
+
+
+# odd_even = lambda a : a%2==0
+# print(odd_even(4))
+
+
+# def cal_lenght(l):
+#     if len(l) > 5:
+#         return True
+#     else:
+#         return False
+# print(cal_lenght('aditya'))
+
+# def cal_lenght(l):
+#     return len(l) > 5
+
+# print(cal_lenght('aditya'))
+
+
+# cal_lenght = lambda l : len(l) > 5
+# print(cal_lenght('aditya'))
+
+# names = ['abc', 'abcd', 'aditya']
+# pos =1
+# for name in names:
+#     print(f"{pos} ---> {name}")
+#     pos += 1
+
+# for pos,name in enumerate(names):
+#     print(f"{pos} ---> {name}")
+
+
+# numbers = [1,2,3,4]
+
+# def square(a):
+#     return a**2
+
+# squaress = list(map(square,numbers))
+# print(squaress)
+
+# squaress = list(map(lambda a : a**2, numbers))
+# print(squaress)
+
+# square = [i**2 for i in numbers]
+# print(square)
+
+
+# def square(a):
+#     return a**2
+# new_list = []
+# for num in numbers:
+#     new_list.append(square(num))
+# print(new_list)
+    
+# numbers = (1,2,3,4,5,6,7,8,9,10)
+
+# def even_no(a):
+#         list = []
+#         for i in a:
+#                 if i%2 == 0:
+#                         list.append(i)
+        
+#         return list
+
+# # i += 1
+
+# print(even_no(numbers))
+
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+
+# def is_even(a):
+#     return a%2 == 0
+# evens = tuple(filter(is_even, numbers))
+
+# print(evens)
+
+# numbers = [1,2,3,4,5]
+
+# square = list(map(lambda a : a**2, numbers))
+
+# print(square)
+
+# numbers = [1,2,3,4,5]
+
+# square = map(lambda a : a**2, numbers)
+
+# number_iter = iter(numbers)
+# print(next(number_iter))
+# print(next(number_iter))
+# print(next(number_iter))
+# print(next(number_iter))
+
+# user_id = ['user1','user2','user3']
+# names = ['aditya','rohan','atharv']
+
+# print(list(zip(user_id,names)))
+
+
+example = [('a',1),('b',2)]
+print(dict(example))

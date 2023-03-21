@@ -768,7 +768,7 @@ if else with list comprehenssion
 list_comp = [i**2 if i%2==0 else -i for i in list]
 print(list_comp)
 
-in list comprehension of if else we took for statement at UnicodeEncodeError
+in list comprehension of if else we took for statement at last 
 
 ====================================
 Nested list ==> List under list
@@ -810,3 +810,95 @@ def all_total(*args):
                 total = total + num
         return total
 print(all_total(31,2,3,5))
+
+
+======================================
+LAMBDA function
+======================================
+
+add = lambda a,b : a+b
+print(add(2,3))
+
+==========
+
+def odd_even(a):
+    return a % 2 == 0
+
+print(odd_even(5))
+
+
+def cal_lenght(l):
+    return len(l) > 5
+
+print(cal_lenght('aditya'))
+
+cal_lenght = lambda l : len(l) > 5
+print(cal_lenght('aditya'))
+
+==========================================
+
+enumerate function
+
+names = ['abc', 'abcd', 'aditya']
+pos = 0
+for name in names:
+    print(f"{pos} ---> {name}")
+
+=========
+for pos,name in enumerate(names):
+    print(f"{pos} ---> {name}")
+
+===========
+map function
+
+numbers = [1,2,3,4]
+
+def square(a):
+    return a**2
+
+squaress = list(map(square,numbers))
+print(squares)
+
+====================
+filter function
+
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+def is_even(a):
+    return a%2 == 0
+evens = tuple(filter(is_even, numbers))
+
+print(evens)
+
+=================================
+iterator and iterables
+
+numbers = [1,2,3,4,5]
+
+square = map(lambda a : a**2, numbers)
+
+number_iter = iter(numbers)
+print(numers)
+
+numbers = [1,2,3,4,5]
+
+
+number_iter = iter(numbers)
+print(next(number_iter))
+print(next(number_iter))
+print(next(number_iter))
+print(next(number_iter))
+
+===========================================
+zip function
+
+user_id = ['user1','user2','user3']
+names = ['aditya','rohan','atharv']
+
+print(list(zip(user_id,names)))
+
+
+tuple to dict
+example = [('a',1),('b',2)]
+print(dict(example))
