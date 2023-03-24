@@ -851,6 +851,8 @@ for pos,name in enumerate(names):
 ===========
 map function
 
+# map square  ---> numbers
+
 numbers = [1,2,3,4]
 
 def square(a):
@@ -902,3 +904,215 @@ print(list(zip(user_id,names)))
 tuple to dict
 example = [('a',1),('b',2)]
 print(dict(example))
+
+
+=========================================
+all and any
+
+numbers1 = [2,4,6,8]
+numbers2 = [1,2,3,4,5]
+
+#list comp
+
+ex = all([num%2 == 0 for num in numbers1])
+print(ex)
+
+
+
+
+def my_sum(*args):
+    if all([(type(arg) == int and type(arg) == float) for arg in args]):
+        total = 0
+        for num in args:
+            total += num
+        return total 
+    else:
+        return ("wrong input")
+    
+print(my_sum(1,2,3,4.5,'aditya'))
+
+=================================================
+Advance min() and max() function
+ How to finf max lenght of string in a list
+
+
+names = ['aditya k','abcd', 'pqt']
+
+print(max(names, key = lambda i : len(i)))
+
+========
+
+student =[
+    {'name':'aditya','age':27,'score':90}
+    {'name':'karthik','age':24,'score':95}
+    {'name':'rohan','age':25,'score':99}
+]
+
+print(max(student, key = lambda i:i.get('score')['name']))
+
+
+students ={
+    'aditya':{'age':27,'score':90},
+    'karthik':{'age':24,'score':95},
+    'rohan':{'age':25,'score':99}
+}
+
+print(max(students, key= lambda i:students[i]['score']))
+
+================================
+Advance sorted function  ==> to arrange names in alphabatical oreder
+
+fruites = ['mango','apple','grapes']
+fruites.sort()
+print(fruites)
+
+but we cant sort in tuple
+
+fruites = ('mango','apple','grapes')
+sorted(fruites)
+print(fruirtes)
+
+#as tuple is immutable, above order wont change
+#so to change it
+
+fruites = ('mango','apple','grapes')
+print(sorted(fruites))
+
+
+badminton = [
+    {'company':'yonex','price': 3000},
+    {'company':'lining','price': 4000},
+    {'company':'victor','price': 5000}
+]
+
+print(sorted(badminton, key = lambda i : i['price']))
+
+print(sorted(badminton, key = lambda i : i['price']), reverse = True)
+
+
+======================================
+more about function
+
+def add(a,b):
+    '''this function takes 2 numbers'''
+    return a+b
+
+#see the string of add function
+print(add.__doc__)
+
+#built in function
+len,sum,max,min,sorted
+
+#see the string of len function
+print(len.__doc__)  
+
+
+====================================
+to kow the info of any function, use 'help'
+
+print(help(sum))
+
+============================
+decorators
+
+def square(a):
+    return a**2
+
+l = [1,2,3,4]
+
+def my_map(func, l):
+    new_list = []
+    for item in l:
+        new_list.append(func(item))
+    return new_list
+
+print(my_map(square,l))
+
+
+l = [1,2,3,4]
+
+print(list(map(lambda a:a**2,l)))
+
+=============================================
+return function from function
+=============================================
+
+def outer_func():
+    def inner_func():
+        print('insie inner func')
+    return inner_func
+
+var = outer_func()
+var()
+
+# if there is func inside func , then we to define variable to return it e.g. var
+
+
+def power(x):
+    def to_the(n):
+        return n**x
+    return to_the
+cube = power(3)
+print(cube(5))
+
+============================
+Decorators ==> enhance the functionality of other function
+
+
+
+def decorater_function(any_func):
+    def inner_func():
+        print('this is awesome')
+        any_func()
+    return inner_func
+
+
+def func1():
+    print("hi hello")
+
+
+def func2():
+    print("how are you")
+
+var = decorater_function(func1)
+var()
+
+#decorater_function will take func1 as a input and return inner_func as output
+#then we use var() to call our inner_func
+
+
+
+172 -178 remaining
+
+=================================
+iterator and iterable
+
+l = [1,2,3] ==> iterable
+
+a= [lambda a:a**2,l] ==> iterator
+
+generator = iterator
+
+===================================
+def nums(n):
+    for i in range(1,n+1):
+        print(i)
+nums(10)
+
+
+===============================
+OOP
+===============================
+
+class Person: #name of class should start with capital letter
+    #class me koi bhi function define hoga use hum 'method' bolte he.
+    def __init__(self,first_name,second_name,age):
+        print('init method class')
+        self.person_first_name = first_name
+        self.person_second_name = second_name
+        self.age = age
+
+p1 = Person('Aditya','Karale',27)
+#p1 is the object
+
+print(p1.person_first_name)
