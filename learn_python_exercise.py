@@ -935,5 +935,35 @@
 # print(list(zip(user_id,names)))
 
 
-example = [('a',1),('b',2)]
-print(dict(example))
+# example = [('a',1),('b',2)]
+# print(dict(example))
+# list1 = [1,2,3]
+# list2 = [3,6,9]
+# list3 = [2,4,6]
+
+# avg = []
+# def lists(l1,l2,l3):
+#         p1 = []
+#         p2 = []
+#         p3 = []
+
+#         for i in l1,l2,l3:
+#                 p1.append(i[0])
+#         # avg.append(sum(p1)/len(p1))
+                
+#         for i in l1,l2,l3:
+#                 p2.append(i[1])
+#         avg.append(sum(p2)/len(p2))
+               
+#         for i in l1,l2,l3:
+#                 p3.append(i[2])
+#         avg.append(sum(p2)/len(p2))
+        
+#         return p1,p2,p3
+#         avg.append(sum(p1)/len(p1))
+       
+# print(avg)
+# print(lists(list1,list2,list3))
+
+average_finder = lambda *args : [sum(a)/len(a) for a in zip(*args)]
+print(average_finder([1,2,3],[4,5,6],[7,8,9]))
