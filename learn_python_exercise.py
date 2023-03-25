@@ -937,6 +937,7 @@
 
 # example = [('a',1),('b',2)]
 # print(dict(example))
+<<<<<<< HEAD
 # list1 = [1,2,3]
 # list2 = [3,6,9]
 # list3 = [2,4,6]
@@ -967,3 +968,299 @@
 
 average_finder = lambda *args : [sum(a)/len(a) for a in zip(*args)]
 print(average_finder([1,2,3],[4,5,6],[7,8,9]))
+=======
+
+# numbers1 = [2,4,6,8]
+# numbers2 = [1,2,3,4,5]
+
+# #list comp
+
+# ex = all([num%2 == 0 for num in numbers1])
+# print(ex)
+
+# def my_sum(*args):
+#     if all([(type(arg) == int or type(arg) == float) for arg in args]):
+#         total = 0
+#         for num in args:
+#             total += num
+#         return total 
+#     else:
+#         return ("wrong input")
+    
+# print(my_sum(1,2,3,4.5))
+
+# names = ['aditya k','abcd', 'pqt']
+
+# print(max(names, key = lambda i : len(i)))
+
+# names = ['aditya k','abcd', 'pqt']
+
+# print(min(names, key = lambda i : len(i)))
+
+# students =[
+#     {'name':'aditya','age':27,'score':90},
+#     {'name':'karthik','age':24,'score':95},
+#     {'name':'rohan','age':25,'score':99}
+# ]
+
+# print(max(students, key = lambda i:i.get('score')))
+# print(max(students, key = lambda i:i.get('score'))['name'])
+
+# students ={
+#     'aditya':{'age':27,'score':90},
+#     'karthik':{'age':24,'score':95},
+#     'rohan':{'age':25,'score':99}
+# }
+
+# print(max(students, key= lambda i:students[i]['score']))
+
+
+# fruites = ['mango','apple','grapes']
+# fruites.sort()
+# print(fruites)
+
+# fruites = ('mango','apple','grapes')
+# print(sorted(fruites))
+
+
+# badminton = [
+#     {'company':'yonex','price': 4000},
+#     {'company':'lining','price': 3000},
+#     {'company':'victor','price': 2000}
+# ]
+
+# print(sorted(badminton, key = lambda i : i['price']))
+# print(sorted(badminton, key = lambda i : i['price'], reverse = True))
+
+
+# def add(a,b):
+#     '''this function takes 2 numbers'''
+#     return a+b
+# print(add.__doc__)
+# print(len.__doc__)
+
+# print(help(sum))
+
+
+# def square(a):
+#     return a**2
+
+# l = [1,2,3,4]
+
+# def my_map(func, l):
+#     new_list = []
+#     for item in l:
+#         new_list.append(func(item))
+#     return new_list
+
+# # print(my_map(square,l))
+
+# print(my_map(lambda a:a**3,l))
+
+# l = [1,2,3,4]
+
+# print(list(map(lambda a:a**2,l)))
+
+
+# def outer_func():
+#     def inner_func():
+#         print('insie inner func')
+#     return inner_func
+
+# var = outer_func()
+
+# def outer_func2(msg):
+#     def inner_func2():
+#         print(f"inside inner func {msg}")
+#     return inner_func2
+# var = outer_func2("hello there")
+# # var()
+
+# def power(x):
+#     def to_the(n):
+#         return n**x
+#     return to_the
+# cube = power(3)
+# print(cube(5))
+
+
+# def decorater_function(any_func):
+#     def inner_func():
+#         print('this is awesome')
+#         any_func()
+#     return inner_func
+
+
+# def func1():
+#     print("hi hello")
+
+
+# def func2():
+#     print("how are you")
+
+# var = decorater_function(func1)
+# var()
+
+# def nums(n):
+#     for i in range(1,n+1):
+#         print(i)
+# nums(10)
+
+# class Person: #name of class should start with capital letter
+#     #class me koi bhi function define hoga use hum 'method' bolte he.
+#     def __init__(self,first_name,second_name,age):
+#         print('init method class')
+#         self.person_first_name = first_name
+#         self.person_second_name = second_name
+#         self.age = age
+
+# p1 = Person('Aditya','Karale',27)
+# p2 = Person('karthik','Tanpure',24)
+
+# print(p1.person_first_name)
+# print(p2.age)
+
+
+# class Laptop:
+#     def __init__(self, brand_name,model_name,price):
+#         self.lapi_brand_name = brand_name
+#         self.lapi_model_name = model_name
+#         self.lapi_prce = price
+
+# l1 = Laptop('mac','book',100000)
+# l2 = Laptop('hp','pavillion',50000)
+
+# print(l1.lapi_brand_name)
+
+
+# class Person:
+#     def __init__(self,first_name,second_name,age):
+#         print('init method class')
+#         self.person_first_name = first_name
+#         self.person_second_name = second_name
+#         self.age = age
+#     def full_name(self):
+#         return f'{self.person_first_name} {self.person_second_name}'
+
+# p1 = Person('Aditya','Karale',27)
+# p2 = Person('karthik','Tanpure',24)
+
+# print(p1.person_first_name)
+
+# print(Person.full_name(p1))
+# #or
+# print(p2.full_name())
+
+# l = [1,2,3]
+# l.clear()
+# print(l)    
+# l.append(5)
+# print(l)
+# list.append(l,6)
+# print(l)
+
+# class Person:
+#     def __init__(self,first_name,second_name,age):
+#         print('init method class')
+#         self.person_first_name = first_name
+#         self.person_second_name = second_name
+#         self.age = age
+#     def full_name(self):
+#         return f'{self.person_first_name} {self.person_second_name}'
+    
+#     def age_above18(self):
+#         return self.age>18
+
+# p1 = Person('Aditya','Karale',27)
+# p2 = Person('karthik','Tanpure',24)
+
+# print(p2.age_above18())
+# print(Person.age_above18(p2))
+
+
+
+# class Laptop:
+#     def __init__(self, brand_name,model_name,price):
+#         self.lapi_brand_name = brand_name
+#         self.lapi_model_name = model_name
+#         self.lapi_price = price
+    
+#     def apply_dicount(self):
+#         a = self.lapi_price - self.lapi_price*0.6
+#         return a 
+    
+    
+        
+ 
+# l1 = Laptop('mac','book',100000)
+# l2 = Laptop('hp','pavillion',50000)
+
+# print(l2.apply_dicount())
+
+# class Circle:
+#     def __init__(self,radius,pi):
+#         self.radius = radius
+#         self.pi = pi
+#     def circumference(self):
+#         return 2*self.pi*self.radius
+    
+# c1 = Circle(4,3.14)
+# c2 = Circle(5,3.14)
+
+# print(c1.circumference())
+# print(Circle.circumference(c1))
+
+#define class variable pi
+
+# class Circle:
+#     pi = 3.14
+#     def __init__(self,radius):
+#         self.radius = radius
+#     def circumference(self):
+#         return 2*Circle.pi*self.radius
+    
+# c1 = Circle(4)
+# c2 = Circle(5)
+
+# print(c1.circumference())
+# print(Circle.circumference(c1))
+
+
+# class Laptop:
+#     discount = 100
+#     def __init__(self, brand_name,model_name,price):
+#         self.lapi_brand_name = brand_name
+#         self.lapi_model_name = model_name
+#         self.lapi_price = price
+
+#     def apply_dicount(self):
+#         a = self.lapi_price - self.lapi_price*Laptop.discount/100
+#         return a 
+
+# l1 = Laptop('mac','book',100000)
+# l2 = Laptop('hp','pavillion',50000)
+
+# print(Laptop.apply_dicount(l2))
+# print(l2.apply_dicount())
+
+# print(l1.__dict__)
+
+class Laptop:
+    # discount = 100
+    def __init__(self, brand_name,model_name,price):
+        self.lapi_brand_name = brand_name
+        self.lapi_model_name = model_name
+        self.lapi_price = price
+
+    def apply_dicount(self):
+        a = self.lapi_price - self.lapi_price*self.discount/100
+        return a 
+
+l1 = Laptop('mac','book',100000)
+l2 = Laptop('hp','pavillion',50000)
+
+print(Laptop.apply_dicount(l2))
+print(l2.apply_dicount(10))
+
+print(l1.__dict__)
+>>>>>>> de1b235c9b89218935ecce004ba88ac1e7c4de94
