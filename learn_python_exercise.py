@@ -937,7 +937,7 @@
 
 # example = [('a',1),('b',2)]
 # print(dict(example))
-<<<<<<< HEAD
+
 # list1 = [1,2,3]
 # list2 = [3,6,9]
 # list3 = [2,4,6]
@@ -966,9 +966,9 @@
 # print(avg)
 # print(lists(list1,list2,list3))
 
-average_finder = lambda *args : [sum(a)/len(a) for a in zip(*args)]
-print(average_finder([1,2,3],[4,5,6],[7,8,9]))
-=======
+# average_finder = lambda *args : [sum(a)/len(a) for a in zip(*args)]
+# print(average_finder([1,2,3],[4,5,6],[7,8,9]))
+
 
 # numbers1 = [2,4,6,8]
 # numbers2 = [1,2,3,4,5]
@@ -1263,4 +1263,3 @@ print(Laptop.apply_dicount(l2))
 print(l2.apply_dicount(10))
 
 print(l1.__dict__)
->>>>>>> de1b235c9b89218935ecce004ba88ac1e7c4de94
