@@ -904,6 +904,333 @@ example = [('a',1),('b',2)]
 print(dict(example))
 
 
+<<<<<<< HEAD
 ===============================================
 
 all and any function
+=======
+=========================================
+all and any
+
+numbers1 = [2,4,6,8]
+numbers2 = [1,2,3,4,5]
+
+#list comp
+
+ex = all([num%2 == 0 for num in numbers1])
+print(ex)
+
+
+
+
+def my_sum(*args):
+    if all([(type(arg) == int and type(arg) == float) for arg in args]):
+        total = 0
+        for num in args:
+            total += num
+        return total 
+    else:
+        return ("wrong input")
+    
+print(my_sum(1,2,3,4.5,'aditya'))
+
+=================================================
+Advance min() and max() function
+ How to finf max lenght of string in a list
+
+
+names = ['aditya k','abcd', 'pqt']
+
+print(max(names, key = lambda i : len(i)))
+
+========
+
+student =[
+    {'name':'aditya','age':27,'score':90}
+    {'name':'karthik','age':24,'score':95}
+    {'name':'rohan','age':25,'score':99}
+]
+
+print(max(student, key = lambda i:i.get('score')['name']))
+
+
+students ={
+    'aditya':{'age':27,'score':90},
+    'karthik':{'age':24,'score':95},
+    'rohan':{'age':25,'score':99}
+}
+
+print(max(students, key= lambda i:students[i]['score']))
+
+================================
+Advance sorted function  ==> to arrange names in alphabatical oreder
+
+fruites = ['mango','apple','grapes']
+fruites.sort()
+print(fruites)
+
+but we cant sort in tuple
+
+fruites = ('mango','apple','grapes')
+sorted(fruites)
+print(fruirtes)
+
+#as tuple is immutable, above order wont change
+#so to change it
+
+fruites = ('mango','apple','grapes')
+print(sorted(fruites))
+
+
+badminton = [
+    {'company':'yonex','price': 3000},
+    {'company':'lining','price': 4000},
+    {'company':'victor','price': 5000}
+]
+
+print(sorted(badminton, key = lambda i : i['price']))
+
+print(sorted(badminton, key = lambda i : i['price']), reverse = True)
+
+
+======================================
+more about function
+
+def add(a,b):
+    '''this function takes 2 numbers'''
+    return a+b
+
+#see the string of add function
+print(add.__doc__)
+
+#built in function
+len,sum,max,min,sorted
+
+#see the string of len function
+print(len.__doc__)  
+
+
+====================================
+to kow the info of any function, use 'help'
+
+print(help(sum))
+
+============================
+decorators
+
+def square(a):
+    return a**2
+
+l = [1,2,3,4]
+
+def my_map(func, l):
+    new_list = []
+    for item in l:
+        new_list.append(func(item))
+    return new_list
+
+print(my_map(square,l))
+
+
+l = [1,2,3,4]
+
+print(list(map(lambda a:a**2,l)))
+
+=============================================
+return function from function
+=============================================
+
+def outer_func():
+    def inner_func():
+        print('insie inner func')
+    return inner_func
+
+var = outer_func()
+var()
+
+# if there is func inside func , then we to define variable to return it e.g. var
+
+
+def power(x):
+    def to_the(n):
+        return n**x
+    return to_the
+cube = power(3)
+print(cube(5))
+
+============================
+Decorators ==> enhance the functionality of other function
+
+
+
+def decorater_function(any_func):
+    def inner_func():
+        print('this is awesome')
+        any_func()
+    return inner_func
+
+
+def func1():
+    print("hi hello")
+
+
+def func2():
+    print("how are you")
+
+var = decorater_function(func1)
+var()
+
+#decorater_function will take func1 as a input and return inner_func as output
+#then we use var() to call our inner_func
+
+
+
+172 -178 remaining
+
+=================================
+iterator and iterable
+
+l = [1,2,3] ==> iterable
+
+a= [lambda a:a**2,l] ==> iterator
+
+generator = iterator
+
+===================================
+def nums(n):
+    for i in range(1,n+1):
+        print(i)
+nums(10)
+
+
+===============================
+OOP
+===============================
+
+class Person: #name of class should start with capital letter
+    #class me koi bhi function define hoga use hum 'method' bolte he.
+    def __init__(self,first_name,second_name,age):
+        #__init__ ==> constructor
+        print('init method class')
+        self.person_first_name = first_name
+        self.person_second_name = second_name
+        self.age = age
+
+p1 = Person('Aditya','Karale',27)
+#p1 is the object
+
+print(p1.person_first_name)
+
+===================
+
+class Person:
+    def __init__(self,first_name,second_name,age):
+        print('init method class')
+        self.person_first_name = first_name
+        self.person_second_name = second_name
+        self.age = age
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+p1 = Person('Aditya','Karale',27)
+p2 = Person('karthik','Tanpure',24)
+
+print(p1.person_first_name)
+print(Person.full_name)
+
+===============
+l = [1,2,3]
+l.clear()
+print(l)    
+l.append(5)
+print(l)
+list.append(l,6)
+print(l)
+
+=========================
+
+class Person:
+    count_instance = 0
+    def __init__(self,first_name,last_name,age):
+        Person.count_instance += 1
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    @classmethod
+    def count_instances(cls):
+        return f"you have created {cls.count_instance} instances of {cls.__name__} class"
+    
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}" 
+    def is_above_18(self):
+        return self.age > 18
+
+p1 = Person('aditya', 'Karale', 27)
+p2 = Person('karthik', 'tanpure', 24)
+
+print(Person.count_instances())
+
+
+====================================
+ENCAPSULATION:
+class function madhe sagle arguments gheun , class fun madhech fun define karne  ==> mhanje class function madhech fun def karne 
+
+ABSTRACTION:
+user se complexcity hide krna matlab abstraction
+
+__init__/__name__ ==> dunder or __ method
+
+__init__ ==> when we call our instance or object
+
+
+=======================
+OOP PROPERT AND SETTER DECORATOR
+
+class Phone:
+    def __init__(self, brand, model_name, price):
+        self.brand = brand
+        self.model_name = model_name
+        self.price = price
+        self.complete_specification = f "{self.brand} {self.model_name} {self.price}"
+
+    def male_a_call(self, phone_number):
+        print(f"calling {phone_number}")
+
+    def full_name(self):
+        return (f"{brand} and {model_name}")
+
+phone1 = Phone('nokia','3366',10000)
+phone1() 
+
+
+===========================
+inheritance
+
+class Phone: #base class/parent class
+    def __init__(self, brand, model_name, price):
+        self.brand = brand
+        self.model_name = model_name
+        self.price = price
+
+    def mobile_name(self):
+        return (f'i have {self.brand} of {self.price} rs')
+    
+class Smartphone: #derived/child class
+    def __init__(self, ram, brand, model_name, price, internal_memory):
+        super().__init__(brand,model_name,price)
+        self.ram = ram
+        self.internal_memory
+
+p1 = Phone('apple','x',50000)
+p2 = Smartphone('4gb','64gb')
+
+print(Smartphone.mobile_name() + f"and price is {Smartphone.price}")
+
+
+
+
+        
+
+
+>>>>>>> main
