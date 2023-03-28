@@ -1107,6 +1107,7 @@ OOP
 class Person: #name of class should start with capital letter
     #class me koi bhi function define hoga use hum 'method' bolte he.
     def __init__(self,first_name,second_name,age):
+        #__init__ ==> constructor
         print('init method class')
         self.person_first_name = first_name
         self.person_second_name = second_name
@@ -1116,3 +1117,116 @@ p1 = Person('Aditya','Karale',27)
 #p1 is the object
 
 print(p1.person_first_name)
+
+===================
+
+class Person:
+    def __init__(self,first_name,second_name,age):
+        print('init method class')
+        self.person_first_name = first_name
+        self.person_second_name = second_name
+        self.age = age
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+p1 = Person('Aditya','Karale',27)
+p2 = Person('karthik','Tanpure',24)
+
+print(p1.person_first_name)
+print(Person.full_name)
+
+===============
+l = [1,2,3]
+l.clear()
+print(l)    
+l.append(5)
+print(l)
+list.append(l,6)
+print(l)
+
+=========================
+
+class Person:
+    count_instance = 0
+    def __init__(self,first_name,last_name,age):
+        Person.count_instance += 1
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    @classmethod
+    def count_instances(cls):
+        return f"you have created {cls.count_instance} instances of {cls.__name__} class"
+    
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}" 
+    def is_above_18(self):
+        return self.age > 18
+
+p1 = Person('aditya', 'Karale', 27)
+p2 = Person('karthik', 'tanpure', 24)
+
+print(Person.count_instances())
+
+
+====================================
+ENCAPSULATION:
+class function madhe sagle arguments gheun , class fun madhech fun define karne  ==> mhanje class function madhech fun def karne 
+
+ABSTRACTION:
+user se complexcity hide krna matlab abstraction
+
+__init__/__name__ ==> dunder or __ method
+
+__init__ ==> when we call our instance or object
+
+
+=======================
+OOP PROPERT AND SETTER DECORATOR
+
+class Phone:
+    def __init__(self, brand, model_name, price):
+        self.brand = brand
+        self.model_name = model_name
+        self.price = price
+        self.complete_specification = f "{self.brand} {self.model_name} {self.price}"
+
+    def male_a_call(self, phone_number):
+        print(f"calling {phone_number}")
+
+    def full_name(self):
+        return (f"{brand} and {model_name}")
+
+phone1 = Phone('nokia','3366',10000)
+phone1() 
+
+
+===========================
+inheritance
+
+class Phone: #base class/parent class
+    def __init__(self, brand, model_name, price):
+        self.brand = brand
+        self.model_name = model_name
+        self.price = price
+
+    def mobile_name(self):
+        return (f'i have {self.brand} of {self.price} rs')
+    
+class Smartphone: #derived/child class
+    def __init__(self, ram, brand, model_name, price, internal_memory):
+        super().__init__(brand,model_name,price)
+        self.ram = ram
+        self.internal_memory
+
+p1 = Phone('apple','x',50000)
+p2 = Smartphone('4gb','64gb')
+
+print(Smartphone.mobile_name() + f"and price is {Smartphone.price}")
+
+
+
+
+        
+
+
