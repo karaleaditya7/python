@@ -51,3 +51,47 @@ bootstrap templates
  <link href="css/styles.css" rel="stylesheet" /> ===> <link href="{{url_for('static', filename='css/styles.css') }}"rel="stylesheet" />
 
 
+=================================================
+Install xampp
+
+https://www.apachefriends.org/download.html
+
+chmod 755 xampp-linux-*-installer.run
+sudo ./xampp-linux-*-installer.run
+
+for more questions:
+https://www.apachefriends.org/faq_linux.html
+
+https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu
+
+if port is already running on system:
+sudo netstat -plten |grep apache
+sudo kill -9 <port no>
+
+sudo service apache2 stop
+
+to start xampp:
+
+sudo /opt/lampp/lampp start
+
+
+http://localhost
+http://localhost/phpmyadmin
+==================================================
+
+Now we have to connect phpmyadmin database with application:
+   
+https://flask.palletsprojects.com/en/0.12.x/tutorial/templates/
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/
+https://www.geeksforgeeks.org/connect-flask-to-a-database-with-flask-sqlalchemy/
+
+https://stackoverflow.com/questions/27766794/switching-from-sqlite-to-mysql-with-flask-sqlalchemy
+
+connect to database:
+
+sudo apt install python-pip
+
+pip install flask-sqlalchemy
+
+from flask_sqlalchemy import SQLAlchemy
+

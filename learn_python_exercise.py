@@ -1303,26 +1303,79 @@
 # # print(phone1.full_name())
 # print(Phone.make_a_call(9665111399))
 
-class Phone: #base class/parent class
-    def __init__(self,brand,model_name,price):
-        self.brand = brand
-        self.model_name = model_name
-        self.price = price
+# class Phone: #base class/parent class
+#     def __init__(self,brand,model_name,price):
+#         self.brand = brand
+#         self.model_name = model_name
+#         self.price = price
 
-    def mobile_name(self):
-        return (f'i have {self.brand} of {self.price} rs')
+#     def mobile_name(self):
+#         return (f'i have {self.brand} of {self.price} rs')
     
-class Smartphone(Phone): #derived/child class
-    def __init__(self,brand,model_name,price,ram,internal_memory):
-        super().__init__(brand,model_name,price)
-        self.ram = ram
-        self.internal_memory = internal_memory
+# class Smartphone(Phone): #derived/child class
+#     def __init__(self,brand,model_name,price,ram,internal_memory):
+#         super().__init__(brand,model_name,price)
+#         self.ram = ram
+#         self.internal_memory = internal_memory
 
-p1 = Phone('apple','x',50000)
-p2 = Smartphone('oneplus',6,30000,'4gb','64gb')
+# p1 = Phone('apple','x',50000)
+# p2 = Smartphone('oneplus',6,30000,'4gb','64gb')
 
-<<<<<<< HEAD
-print(l1.__dict__)
-=======
-print(p2.mobile_name() +" "+ f"and ram is {p2.ram} and internal memory {p2.internal_memory}")
->>>>>>> main
+# print(l1.__dict__)
+# print(p2.mobile_name() +" "+ f"and ram is {p2.ram} and internal memory {p2.internal_memory}")
+
+# def add(a,b):
+#     if(type(a) is int ) and (type(b) is int):
+#         return a+b
+#     raise TypeError('oops you are passing wrong data type to function')
+# print(add('2','3'))
+
+
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+
+#     def sound(self):
+#         return 'this is animal sound'
+
+# class Dog(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.breed = breed
+
+# class Cat(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.breed = breed
+    
+# doggy = Dog('scooby','roadacian')
+# print(doggy.sound())
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    def sound(self):
+        # return 'this is animal sound'
+        raise NotImplementedError ("you have to define this method in subclass")
+    
+class Dog(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'bho bho'
+
+class Cat(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'meao meao'
+    
+doggy = Dog('scooby','roadacian')
+cat = Cat("mani",'percian')
+print(doggy.sound())
+print(cat.sound())
