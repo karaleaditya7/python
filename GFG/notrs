@@ -1,0 +1,17 @@
+python3 -V
+sudo apt install python3-venv
+python3 -m venv app
+source app/bin/activate
+pip install Flask
+python -m flask --version
+
+will be using SQLAlchemy a database toolkit, and an ORM(Object Relational Mapper)
+
+pip install flask-sqlalchemy
+
+Creating the database
+python
+db.create_all()
+
+Making Migrations in database
+pip install Flask-Migrate

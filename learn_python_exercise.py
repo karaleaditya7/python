@@ -1245,21 +1245,137 @@
 
 # print(l1.__dict__)
 
-class Laptop:
-    # discount = 100
-    def __init__(self, brand_name,model_name,price):
-        self.lapi_brand_name = brand_name
-        self.lapi_model_name = model_name
-        self.lapi_price = price
+# class Laptop:
+#     # discount = 100
+#     def __init__(self, brand_name,model_name,price):
+#         self.lapi_brand_name = brand_name
+#         self.lapi_model_name = model_name
+#         self.lapi_price = price
 
-    def apply_dicount(self):
-        a = self.lapi_price - self.lapi_price*self.discount/100
-        return a 
+#     def apply_dicount(self):
+#         a = self.lapi_price - self.lapi_price*self.discount/100
+#         return a 
 
-l1 = Laptop('mac','book',100000)
-l2 = Laptop('hp','pavillion',50000)
+# l1 = Laptop('mac','book',100000)
+# l2 = Laptop('hp','pavillion',50000)
 
-print(Laptop.apply_dicount(l2))
-print(l2.apply_dicount(10))
+# print(Laptop.apply_dicount(l2))
+# print(l2.apply_dicount(10))
 
-print(l1.__dict__)
+# print(l1.__dict__)
+
+# class Person:
+#     count_instance = 0
+#     def __init__(self,first_name,last_name,age):
+#         Person.count_instance += 1
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+
+#     @classmethod
+#     def count_instances(cls):
+#         return f"you have created {cls.count_instance} instances of {cls.__name__} class"
+    
+#     def full_name(self):
+#         return f"{self.first_name} {self.last_name}" 
+#     def is_above_18(self):
+#         return self.age > 18
+
+# p1 = Person('aditya', 'Karale', 27)
+# p2 = Person('karthik', 'tanpure', 24)
+
+# print(Person.count_instances())
+
+# class Phone:
+#     def __init__(self, brand, model_name, price):
+#         self.brand = brand
+#         self.model_name = model_name
+#         self.price = price
+#         self.complete_specification = (f"{self.brand} {self.model_name} {self.price}")
+
+#     def make_a_call(self, phone_number):
+#         print(f"calling {phone_number}")
+
+#     def full_name(self):
+#         return (f"{self.brand} and {self.model_name}")
+
+# phone1 = Phone('nokia','3366',10000)
+# # print(phone1.full_name())
+# print(Phone.make_a_call(9665111399))
+
+# class Phone: #base class/parent class
+#     def __init__(self,brand,model_name,price):
+#         self.brand = brand
+#         self.model_name = model_name
+#         self.price = price
+
+#     def mobile_name(self):
+#         return (f'i have {self.brand} of {self.price} rs')
+    
+# class Smartphone(Phone): #derived/child class
+#     def __init__(self,brand,model_name,price,ram,internal_memory):
+#         super().__init__(brand,model_name,price)
+#         self.ram = ram
+#         self.internal_memory = internal_memory
+
+# p1 = Phone('apple','x',50000)
+# p2 = Smartphone('oneplus',6,30000,'4gb','64gb')
+
+# print(l1.__dict__)
+# print(p2.mobile_name() +" "+ f"and ram is {p2.ram} and internal memory {p2.internal_memory}")
+
+# def add(a,b):
+#     if(type(a) is int ) and (type(b) is int):
+#         return a+b
+#     raise TypeError('oops you are passing wrong data type to function')
+# print(add('2','3'))
+
+
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+
+#     def sound(self):
+#         return 'this is animal sound'
+
+# class Dog(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.breed = breed
+
+# class Cat(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.breed = breed
+    
+# doggy = Dog('scooby','roadacian')
+# print(doggy.sound())
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    def sound(self):
+        # return 'this is animal sound'
+        raise NotImplementedError ("you have to define this method in subclass")
+    
+class Dog(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'bho bho'
+
+class Cat(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'meao meao'
+    
+doggy = Dog('scooby','roadacian')
+cat = Cat("mani",'percian')
+print(doggy.sound())
+print(cat.sound())
