@@ -851,8 +851,6 @@ for pos,name in enumerate(names):
 ===========
 map function
 
-# map square  ---> numbers
-
 numbers = [1,2,3,4]
 
 def square(a):
@@ -906,6 +904,11 @@ example = [('a',1),('b',2)]
 print(dict(example))
 
 
+<<<<<<< HEAD
+===============================================
+
+all and any function
+=======
 =========================================
 all and any
 
@@ -1224,9 +1227,64 @@ p2 = Smartphone('4gb','64gb')
 
 print(Smartphone.mobile_name() + f"and price is {Smartphone.price}")
 
+==============================================================================
+
+Built in KeyError
+
+def add(a,b):
+    if(type(a) is int ) and (type(b) is int):
+        return a+b
+    raise TypeError('oops you are passing wrong data type to function')
+print(add('2','3'))
 
 
+class Animal:
+    def __init__(self,name):
+        self.name = name
 
-        
+    def sound(self):
+        return 'this is animal sound'
 
+class Dog(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
 
+class Cat(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+doggy = Dog('scooby','roadacian')
+print(doggy.sound())
+
+#now we have to inheritt sound fun in any animal class such as dog or cat so that sounf of particular animal will get call in particular animal class
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    def sound(self):
+        # return 'this is animal sound'
+        raise NotImplementedError ("you have to define this method in subclass")
+    
+class Dog(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'bho bho'
+
+class Cat(Animal):
+    def __init__(self,name,breed):
+        super().__init__(name)
+        self.breed = breed
+    
+    def sound(self):
+        return 'meao meao'
+    
+doggy = Dog('scooby','roadacian')
+cat = Cat("mani",'percian')
+print(doggy.sound())
+print(cat.sound())
